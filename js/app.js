@@ -98,4 +98,23 @@ mohammed.render();
 let Reem = new Student ('Reem', 3793 , 27 , 50);
 Reem.updatemark();
 Reem.render();
-footerrender();
+// footerrender();
+
+const form = document.getElementById('nwstudent');
+form.addEventListener('submit', studentCreator);
+
+function studentCreator(event){
+    event.preventDefault();
+    const studname = event.target.StudentName.value;
+    console.log(studname);
+    let age = event.target.StudentAge.value;
+    console.log(age);
+    let studNam = event.target.studentNumber.value;
+    console.log(studNam);
+    let newstu = new Student (studname , age , studNam) ;
+    newstu.updatemark();
+    newstu.render();
+    footerrender();
+    }
+
+    
