@@ -1,0 +1,40 @@
+*
+{
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(20, 90, 90);
+    height: 10vh;
+}
+#logo{
+    height: 10vh;
+}
+nav ul {
+float: right;
+margin-right: 100px;
+}
+nav ul li {
+display: inline ;
+position: relative;
+top: 1vh;
+
+}
+
+nav ul li a{
+    padding-left: 50px;
+    text-decoration: none;
+    color: burlywood;
+
+}
+table{
+    width: 50%;
+
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+ th , td {
+    border: 3px solid black;
+    font-weight: bold;
+
+}
