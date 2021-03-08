@@ -1,5 +1,5 @@
 // form to fill 
-'usestrect';
+'use strict';
 function randomMark(min , max)
 {
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -8,7 +8,10 @@ function randomMark(min , max)
 let sut=[];
 let divel = document.getElementById('article')
 let table= document.createElement('table'); 
+let paragraph = document.getElementById('p');
 let totale = 0;
+let rowcount = 0;
+let get ;
 function Student(stuName , number, age)
  {
      this.stuName=stuName;
@@ -61,6 +64,13 @@ Student.prototype.render=function()
     let td4 = document.createElement('td');
     tr2.appendChild(td4);
     td4.textContent= this.marke;
+    rowcount++;
+    
+    let ulEl = document.createElement('ul');
+    paragraph.appendChild(ulEl);
+    let liEl = document.createElement('li');
+    ulEl.appendChild(liEl);
+    liEl.textContent = `${this.stuName } a new student and his marke is  ${this.marke}` ; 
 
 }
 function footerrender ()
@@ -86,6 +96,24 @@ let tdf3 =document.createElement('td');
 
 }
 
+function savestudent (){
+    let save = JSON.stringify(sut);
+    localStorage.setItem ('allstudent', save);
+}
+function getstudent(){     
+    let get =  JSON.parse(localStorage.getItem('allstudent'));
+    let olEl = document.createElement('ol');
+    paragraph.appendChild(olEl);
+    let litel = document.createElement('li');
+    olEl.appendChild(litel);
+    for(let i = 0; i < get.length ; i++)
+    {
+            litel.textContent = `${get[i].stuName} has number ${get[i].number}`;
+
+    }
+   
+}
+  
 headrrender();
 let zaid = new Student ('zaid', 1234 , 18 , 50);
 zaid.updatemark();
@@ -98,23 +126,25 @@ mohammed.render();
 let Reem = new Student ('Reem', 3793 , 27 , 50);
 Reem.updatemark();
 Reem.render();
-// footerrender();
-
+footerrender();
 const form = document.getElementById('nwstudent');
 form.addEventListener('submit', studentCreator);
-
+let newstu;
 function studentCreator(event){
     event.preventDefault();
     const studname = event.target.StudentName.value;
-    console.log(studname);
+    // console.log(studname);
     let age = event.target.StudentAge.value;
-    console.log(age);
+    // console.log(age);
     let studNam = event.target.studentNumber.value;
-    console.log(studNam);
-    let newstu = new Student (studname , age , studNam) ;
+    // console.log(studNam);
+    newstu = new Student (studname , age , studNam) ;
     newstu.updatemark();
     newstu.render();
+    table.deleteRow(rowcount);
+    savestudent();
+    getstudent();
     footerrender();
-    }
+}
 
     
