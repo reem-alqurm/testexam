@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+header{
+    background-color: rgb(121, 192, 180);
+    height: 10vh;
+}
+
+
+
+#logo{
+    height: 10vh;
+}
+nav ul {
+float: right;
+margin-right: 100px;
+}
+nav ul li {
+display: inline ;
+position: relative;
+top: 1vh;
+padding-left: 10px;
+
+}nav ul li a{
+    text-decoration: none;
+    color: rgb(33, 43, 61);
+
+} 
+footer{
+    clear: both;
+    background-color: rgb(121, 192, 180);
+    height: 10vh;
+    position: relative;
+    top: 550px;
+    margin-bottom: -100px;
+
+}

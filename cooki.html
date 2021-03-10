@@ -1,0 +1,54 @@
+<!-- all the barnsh must be ented by the user bransh name 
+    min cutomer max customer avareg but randome customer , cookies bnhsbah avger
+totle each bransh par hour and a total for all the barnshes  , 
+takes the datat ented form the form and display it as a ul but from the local sotrge
+the charts will disply all bransh with its total -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cookie.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+</head>
+    <title>Cookie Shope</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="logo" src="https://www.deweys.com/static/version1613437399/frontend/InverseParadox/deweys/en_US/images/logo.png" alt="logo">
+            <ul>
+                <li> <a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Sales</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <!-- <h1>Mohammed Is The Best  </h1> -->
+        <form id="newbransh">
+            <fieldset>
+                <legend> Add New Bransh </legend>
+                <label for="branshname">Bransh Name :</label>
+                <input type="text" id="branshname" required><br><br>
+                <label for="minimum">Minimum Customer :</label>
+                <input type="number" id="minimum" required><br><br>
+                <label for="maximum">Maximum Customer :</label>
+                <input type="number" id="maximum" required><br><br>
+                <label for="avareg">Avareg cookiue:</label>
+                <input type="number" id="avareg" required><br><br>
+                <input type="submit">
+            </fieldset>
+        </form>
+
+        <article id="article"></article>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/cookie.js"></script>
+</body>
+</html>

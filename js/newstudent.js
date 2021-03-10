@@ -26,7 +26,6 @@ function mystudentfunction (event)
         const cname = document.getElementById('Classname').value;
         // console.log(name);
         // console.log(cname);
-        localStorage.setItem('student ',JSON.stringify(newob));
         newob = new Student (name , cname);
         newob.render();
         newob.tablerender();
@@ -38,6 +37,7 @@ Student.prototype.render= function(){
     let liEl = document.createElement('li');
     ulEl.appendChild(liEl);
     liEl.textContent= `${this.studentname} regestered  ${this.classname}class`;
+    console.log(arrayofstudent);
 }
 
 function tableheadrender()
@@ -64,25 +64,52 @@ Student.prototype.tablerender = function()
     th4.textContent= this.classname;
 
 }
+console.log(arrayofstudent);
  Student.prototype.savetolocal = function(){
 
  localStorage.setItem('student',JSON.stringify(arrayofstudent));
 
 } 
 Student.prototype.getfromlocal = function(){
+    
      getlist =JSON.parse (localStorage.getItem('student'));
-     let oli = document.createElement('li');
-     olel.appendChild(oli);
-       for(let i = 0 ; i < getlist.length; i++)
-       {
-           
-           oli.textContent= `${getlist[i].studentname} Registered  ${getlist[i].classname} Class`;
-
-           
-       } 
-   
- 
+     if(getlist){
+         arrayofstudent=getlist;
+         let oli = document.createElement('li');
+         olel.appendChild(oli);
+           for(let i = 0 ; i < getlist.length; i++)
+           {
+               
+               oli.textContent= `${getlist[i].studentname} Registered  ${getlist[i].classname} Class`;
+     
+           } 
+     }
+     else{
+         arrayofstudent=[];
+     }
+    
     }
-         
+    function getData()
+    {
+        getlist =JSON.parse (localStorage.getItem('student'));
+        if(getlist){
+            arrayofstudent=getlist;
+           
+              for(let i = 0 ; i < getlist.length; i++)
+              {
+                              let oli = document.createElement('li');
+                               olel.appendChild(oli);
+
+                  oli.textContent= `${getlist[i].studentname} Registered  ${getlist[i].classname} Class`;
+        
+              } 
+        }
+        else{
+            arrayofstudent=[];
+        }
+       
+
+    }
+    getData();
 
    

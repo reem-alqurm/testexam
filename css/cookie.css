@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+header{
+    background-color: burlywood;
+    height: 10vh;
+}
+
+
+
+#logo{
+    height: 10vh;
+}
+nav ul {
+float: right;
+margin-right: 100px;
+}
+nav ul li {
+display: inline ;
+position: relative;
+top: 1vh;
+padding-left: 10px;
+
+}nav ul li a{
+    text-decoration: none;
+    color: rgb(33, 43, 61);
+
+} 
+
+footer{
+    clear: both;
+    background-color: burlywood;
+    height: 10vh;
+    position: relative;
+    top: 360px;
+    margin-top: -100px;
+}
+form{
+    width: 50px;
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+table{
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+table, th,td{
+    border: rgb(33, 43, 61) solid 1px;
+    color: rgb(33, 43, 61);
+    font-weight: lighter;
+}
+h1{
+    color: rgb(33, 43, 61);
+    position: relative;
+    left: 500px;
+    
+
+}

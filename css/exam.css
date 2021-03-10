@@ -1,0 +1,96 @@
+*{
+    box-sizing:border-box ;
+}
+html{
+    background-image: url('https://westeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Falqudscollege-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!2spDmTvk_Ey3l_QSLPv1vkLnsRzUCaRDqWTh1FX8GP5tUMRzFWzmQ47zimRsNl9q%2Fitems%2F015YABFJX6OTTMEM5MWVCZFHPXYJGKR637%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvYWxxdWRzY29sbGVnZS1teS5zaGFyZXBvaW50LmNvbUBhMTYyYzUzMi03YTBjLTQ2NDUtOTZmZC0yMGQwMTljZjRlNWEiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjE1MjY5NjAwIiwiZXhwIjoiMTYxNTI5MTIwMCIsImVuZHBvaW50dXJsIjoiVzlMTWdBNGxHaTJ6MjJ2M3VoNEcxNVJDMmlpLzZrMllKd1ZyWVJwSklSUT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9UazBNMk5oWkdFdFpUUXpZaTAwWTJaakxXSTNPVGN0WmpReE1qSmpabUptTldKbCIsIm5hbWVpZCI6IjAjLmZ8bWVtYmVyc2hpcHx1cm4lM2FzcG8lM2Fhbm9uIzE3NDIwZGU2ZTQ5MTNkNjRkODA1MzM1ZGU3Yjk0MmY2MmY1OTNjYjAzYTMyNWIzNjhhZGQ4OWFhM2YwMzcwZjciLCJuaWkiOiJtaWNyb3NvZnQuc2hhcmVwb2ludCIsImlzdXNlciI6InRydWUiLCJjYWNoZWtleSI6IjBoLmZ8bWVtYmVyc2hpcHx1cm4lM2FzcG8lM2Fhbm9uIzE3NDIwZGU2ZTQ5MTNkNjRkODA1MzM1ZGU3Yjk0MmY2MmY1OTNjYjAzYTMyNWIzNjhhZGQ4OWFhM2YwMzcwZjciLCJzaGFyaW5naWQiOiI1WWpONlIzdWRFMklpZUNPUFRZOWJRIiwidHQiOiIwIiwidXNlUGVyc2lzdGVudENvb2tpZSI6IjIifQ.ZmhBOFdLd3VIenA4eW1yQ1lNOFdrRlloSFUrTHlPTTM4WmV6aUNnN1BwQT0&encodeFailures=1&srcWidth=&srcHeight=&width=563&height=375&action=Access') ;
+background-size: cover;
+background-repeat: no-repeat;
+}
+html , body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+header{
+    background-color: rgba(238, 238, 238, 0.548);
+    height: 50px;
+}
+nav ul{
+    overflow:hidden;    
+    float: right;
+
+}
+nav ul li{
+    display: inline;
+    padding-right: 10px;
+    margin-right: 50px;
+    color: white;
+    font-weight: bold;
+
+}
+nav ul li a{
+    text-decoration: none;
+}
+h2{
+    color: white;
+    position: relative;
+    font-weight: bold;
+    top: 15px;
+    text-align: center;
+}
+
+form{
+    background-color: rgba(238, 238, 238, 0.541);
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 50px;
+    width: 500px;
+    height: 300px;
+    /* text-align: center; */
+    border: white solid 3px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+
+}
+#article{
+    border: white solid 3px;
+    width: 50%;
+    float: right;
+    position: relative;
+    top: 20px;
+    right: 50px;
+    height: 300px;
+    background-color: rgba(238, 238, 238, 0.541);
+
+}
+table{
+    background-color: rgba(238, 238, 238, 0.541);
+    text-align: center;
+    border: white solid 3px;
+    width: 100%;
+   
+}
+td,th{
+    border: white solid 3px;
+    color: white;
+    font-weight: bold;
+
+}
+h3{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer{
+    clear: both;
+    height: 50px;
+    background-color: rgba(238, 238, 238, 0.548);
+position: relative;
+margin-top: 253px;
+margin-bottom: -100px;
+}
