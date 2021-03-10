@@ -5,17 +5,19 @@ articleEl.appendChild (tableEl);
 let formEl = document.getElementById('studentform');
 let total = 0;
 let getlist;
+let id=0;
+let allStudent=[];
+
 function Student ( name ,email , mobilenumber,tutation ){
     this.name=name;
     this.email=email;
     this.mobilenumber=mobilenumber;
-    this.id=0;
+    
     this.studentAge=0;
     this.tuition=tutation;
-    
-    Student.allStudent.push(this);
+    total=total+this.tuition;
+   allStudent.push(this);
 }
-Student.allStudent=[];
 
 Student.prototype.generatrandomage= function  (){
     return this.studentAge= Math.floor(Math.random()*(24-18)+18);
@@ -30,6 +32,9 @@ th1.textContent= 'id';
 let th2 = document.createElement('th');
 trh.appendChild(th2);
 th2.textContent= 'Name';
+let th6 = document.createElement('th');
+trh.appendChild(th6);
+th6.textContent= 'Email';
 let th3 = document.createElement('th');
 trh.appendChild(th3);
 th3.textContent= 'Mobile';
@@ -48,64 +53,66 @@ function addnewstudent(event){
     let email = event.target.studentemail.value;
     let mobileNum = event.target.studentnumber.value;
     let studentnm = email.split('@');
-    // let selected = event.options [event.selectedIndex].value;
-    let selected = event.target.options[event.target.selectedIndex].value; 
-    // let selected = document.getElementById("tuition").value
-    let newstudent = new Student(studentnm,email,mobileNum,selected);
-    newstudent.id++; 
-    total = total +selected; 
+    studentnm = studentnm[0];
+    let tuition = parseInt(event.target.tuition.value) ; 
+    
+    let newstudent = new Student(studentnm,email,mobileNum,tuition);
+    id++; 
+    
     newstudent.save();
-    newstudent.get();
     newstudent.generatrandomage();
-    newstudent.tablebodyrender();
+    tablebodyrender();
+
 
 }
+let totalEl = document.createElement('h3');
+articleEl.appendChild(totalEl);
+totalEl.textContent= 'Total :  ' + total;
 
-Student.prototype.tablebodyrender = function(){
+ function tablebodyrender (){
 let trb = document.createElement ('tr');
 tableEl.appendChild(trb);
 let td6 = document.createElement('td');
 trb.appendChild(td6);
-td6.textContent= this.id;
 let td7 = document.createElement('td');
 trb.appendChild(td7);
-td7.textContent= this.name;
 let td8 = document.createElement('td');
 trb.appendChild(td8);
-td8.textContent= this.mobilenumber;
 let td9 = document.createElement('td');
 trb.appendChild(td9);
-td9.textContent= this.studentAge;
 let td10 = document.createElement('td');
 trb.appendChild(td10);
-td10.textContent= this.tuition;
-
-
+let td11 = document.createElement('td');
+trb.appendChild(td11);
+for(let y = 0 ; y <allStudent.length ; y++){
+    td6.textContent= id;
+    td7.textContent= allStudent[y].name;
+    td8.textContent= allStudent[y].email;
+    td9.textContent= allStudent[y].mobilenumber;
+    td10.textContent= allStudent[y].studentAge;
+    td11.textContent= allStudent[y].tuition;
+    totalEl.textContent= 'Total :  ' + total;
 
 }
 
-let totalEl = document.createElement('h3');
-articleEl.appendChild(totalEl);
-totalEl.textContent= 'Total:  ' + total;
+}
+
+
 
 
 Student.prototype.save = function (){
-    localStorage.setItem('newstud', JSON.stringify(this.allStudent));
+    localStorage.setItem('newstud', JSON.stringify(allStudent));
 }
-Student.prototype.get = function ()
+function get()
 {
     getlist = JSON.parse(localStorage.getItem('newstud'));
     if(getlist){
         allStudent = getlist;
-        for(let j = 0; j< getlist.length ; j++)
-        {
-           this.allStudent[j].tablebodyrender();
-
+        tablebodyrender();
         }
-       
+       else{
+        allStudent =[];
     }
-    else{
-        this.allStudent =[];
     }
+    get ();
 
-}

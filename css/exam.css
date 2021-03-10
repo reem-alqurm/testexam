@@ -14,8 +14,9 @@ html , body{
 }
 
 header{
-    background-color: rgba(238, 238, 238, 0.548);
+    background-color: rgba(96, 96, 96, 0.63);
     height: 50px;
+    border-bottom: white solid 1px;
 }
 nav ul{
     overflow:hidden;    
@@ -31,7 +32,8 @@ nav ul li{
 
 }
 nav ul li a{
-    text-decoration: none;
+    /* text-decoration: none; */
+    color: white;
 }
 h2{
     color: white;
@@ -42,7 +44,8 @@ h2{
 }
 
 form{
-    background-color: rgba(238, 238, 238, 0.541);
+    background-color: rgba(96, 96, 96, 0.63);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: inline-block;
     position: relative;
     top: 20px;
@@ -50,47 +53,82 @@ form{
     width: 500px;
     height: 300px;
     /* text-align: center; */
-    border: white solid 3px;
+    border-radius:  5px;
     color: white;
     font-weight: bold;
     padding: 20px;
 
 }
 #article{
-    border: white solid 3px;
+    border-radius: 5px;
     width: 50%;
     float: right;
     position: relative;
     top: 20px;
     right: 50px;
     height: 300px;
-    background-color: rgba(238, 238, 238, 0.541);
+    background-color: rgba(96, 96, 96, 0.63);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 table{
-    background-color: rgba(238, 238, 238, 0.541);
+    background-color: rgba(96, 96, 96, 0.63);
     text-align: center;
-    border: white solid 3px;
-    width: 100%;
+    border: white solid 1px;
+    width: 70%;
+    position: relative;
+    top:20px;
+    left: 100px;
    
 }
 td,th{
-    border: white solid 3px;
+    border: white solid 1px;
     color: white;
     font-weight: bold;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
 
 }
 h3{
     color: white;
     font-weight: bold;
     text-align: center;
+    position: relative;
+    top: 50px;
 }
 
 footer{
     clear: both;
     height: 50px;
-    background-color: rgba(238, 238, 238, 0.548);
+    background-color: rgba(96, 96, 96, 0.63);
 position: relative;
 margin-top: 253px;
 margin-bottom: -100px;
 }
+#footerh{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+input [type=text] {
+width: 50px;
+}
+select{
+    width: 200px;
+}
+  input[type=submit] {
+    background-color: #989c98;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 200px;
+  }
